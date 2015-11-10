@@ -7,7 +7,7 @@ server:
    - "/opt/teamcity/:/var/lib/teamcity"
 
 agent1:
-  build: teamcity-agent-docker
+  build: agent
   privileged: true
   restart: always
   volumes:
@@ -20,7 +20,7 @@ agent1:
    - server
 
 agent2:
-  build: teamcity-agent-docker
+  build: agent
   restart: always
   privileged: true
   volumes:
